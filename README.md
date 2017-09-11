@@ -25,13 +25,15 @@ import { DateTimePickerModule} from 'ngx-datetime-picker';
 
 ```html
 
-<ngx-datetime-picker [(selectedDateTime)]="dateTimeExample"></ngx-datetime-picker>
+<ngx-datetime-picker [(selectedDateTime)]="dateTimeExample" [format] = 'YYYY-MM-DD HH:mm' ></ngx-datetime-picker>
 
-<ngx-date-picker [(selectedDate)]="dateExample"></ngx-date-picker>
+<ngx-date-picker [(selectedDate)]="dateExample" [format] = 'YYYY-MM-DD'></ngx-date-picker>
 
 <ngx-time-picker [(selectedTime)]="timeExample"></ngx-time-picker>
 
 ```
+
+(https://momentjs.com/docs/#/parsing/string-format/)
 
 ## CSS
 
