@@ -167,6 +167,6 @@ export class DateService {
 	}
 
 	toMoment(date: Date, str:string){
-		return moment(Date).format(str);
+		return moment(date).format(str);
 	}
 }
