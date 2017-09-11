@@ -11,6 +11,7 @@ import { DateService, dayOfTheMonth } from '../services/date.service';
 export class DateTimePickerComponent implements OnInit {
 	@Input() selectedDateTime: Date;
 	@Input() placeholder: string;
+	@Input() format: string = 'YYYY-MM-DD HH:mm';
 
 	@Output() selectedDateTimeChange = new EventEmitter<Date>();
 
@@ -25,10 +26,10 @@ export class DateTimePickerComponent implements OnInit {
 	isMobile: boolean;
 	invalid: boolean;
 	get formattedDate() {
-		return this.dateService.formatMMDDYYYY_HHMM_AMPM(this.selectedDateTime);
+		return this.dateService.toMoment(this.selectedDateTime, this.format);
 	}
 	get mobileFormattedDate() {
-		return this.dateService.formatMobileYYYYMMDDTHHMM(this.selectedDateTime);
+		return this.dateService.toMoment(this.selectedDateTime, this.format);
 	}
 
 	constructor(private isMobileService: IsMobileService, public dateService: DateService, private eRef: ElementRef) {

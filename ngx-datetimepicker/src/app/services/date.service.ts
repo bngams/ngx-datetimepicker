@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as moment from 'moment-timezone';
 
 export interface dayOfTheMonth {
 	day: number;
@@ -163,5 +164,9 @@ export class DateService {
 			startYear = startYear + 1;
 		}
 		return returnYears;
+	}
+
+	toMoment(date: Date, str:string){
+		return moment(Date).format(str);
 	}
 }

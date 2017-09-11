@@ -18,7 +18,9 @@
   },
   "author": "Josh Sommer <joshdsommer@gmail.com> (https://twitter.com/_JoshSommer)",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "moment": "^2.18.1"
+  },
   "devDependencies": {
     "typescript": "~2.2.2"
   },
